@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  
+<head><body><tag>
+  <!--Tab to edit-->
+</tag></body>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="module" src="Firecomponents/auth.js"></script>
+<script type="module" src="Firecomponents/firebaseConfig.js"></script>
+
+
   <title>CALAVERITA1</title>
-  <link rel="stylesheet" href="styles.css" />
+
+<!---CSS de la Plataforma--->
+  <!-- pantallas grandes (PC) -->
+<link rel="stylesheet" href="Stylesheet/styles-pc.css" media="screen and (min-width: 769px)">
+
+<!-- Para Teléfonos -->
+<link rel="stylesheet" href="Stylesheet/styles-mobile.css" media="screen and (max-width: 768px)">
+<!------------------------>
 </head>
 <body>
+  
+  <!---Autenticacion de Cuenta-->
+  <div id="auth">
+<input type="email" id="email" placeholder="Correo">
+<input type="password" id="password" placeholder="Contraseña">
+<button id="registerBtn">Registrar</button>
+<button id="loginBtn">Iniciar Sesión</button>
+  
   <div class="container">
    <!-- Botón para abrir/cerrar -->
 <button id="toggleSidebarBtn" class="toggle-btn">☰</button>
@@ -25,10 +47,10 @@
         <p class="last-msg">Pndjo men</p>
       </div>
     </div>
+    
     <!-- Puedes duplicar este bloque para más chats -->
   </div>
 </aside>
-
         </div>
         <!-- Puedes duplicar más bloques como este -->
       </div>
@@ -36,5 +58,12 @@
 
     <script src="script.js"></script>
   </div>
+  
+  <div id="chat" style="display:none;">
+    <div id="messages" style="height:200px; overflow-y:auto; border:1px solid #ccc;"></div>
+    <input type="text" id="messageInput" placeholder="Escribe un mensaje">
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+  
 </body>
 </html>
